@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Madagascar Travel
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+            <div class="header">
+                <h1>
+                    Madagascar Travel
+                    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>            
+                </h1>
+            </div>
+            <div class="menu" id="menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="signup.html">Sign Up</a>
+                <a href="signin.html">Sign In</a>
+                <a href="myaccount.html">My account</a>
+            </div>
+        
+        <script>
+            function toggleMenu(){
+                var menu = document.getElementById("menu");
+                if(menu.style.display ==="flex"){
+                    menu.style.display="none";
+                } else{
+                    menu.style.display="flex";
+                }
+            }
+        </script>
+        <script>
+            const currentLocation= window.location.pathname;
+            const menuItems= document.querySelectorAll("div a");
+            menuItems.forEach(item => {
+                if(item.getAttribute("href") === currentLocation){
+                    item.classList.add("active")
+                }
+            });
+        </script>
+        <p>
+            <a href="https://www.diplomatie.gouv.fr/fr/dossiers-pays/madagascar/presentation-de-madagascar/">Madagascar</a> is an island which by overview get along with africa. We call Madagascar's people MALAGASY.<br> Malagasy people are enthusiastic, dynamic and get well with foreigners. Traveling there is better than any other countries.<br> There are some before taste for the adventure.<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Madagascar_physical_map.svg/420px-Madagascar_physical_map.svg.png">Click here to view the map.</a>
+        </p>
+        <h2>List of destinations: </h2>
+        <div class="grid-container">
+            <div class="box">
+                <img src="antananarivo.jpg" alt="Antananarivo" class="img1" onclick="openModal(this)">
+                <p>Antananarivo(capital)</p>
+                <a href="https://fr.wikipedia.org/wiki/Antananarivo" target="_blank">Documentation(click here)</a>
+                <br>
+                <a href="photo.html" target="_blank">More pictures</a>
+            </div>
+            <div class="box">
+                <img src="toamasina.jpg" alt="toamasina" class="img1" onclick="openModal(this)">
+                <p>Toamasina</p>
+                <a href="https://fr.wikipedia.org/wiki/Tamatave" target="_blank">Documentation(click here)</a>
+                <br>
+                <a href="photo1.html" target="_blank">More pictures</a>
+            </div>
+            <div class="box">
+                <img src="https://media.istockphoto.com/id/624250780/fr/photo/baie-dantsiranana-madagascar.jpg?s=612x612&w=0&k=20&c=xHM7JeLr_YgRlO5OtHZ3TFk0rJtQrWgDioj2c6uUrN8=" class="img1">
+                <p>Antsiranana</p>
+                <a href="https://fr.wikipedia.org/wiki/Antsiranana" target="_blank">Documentation(click here)</a>
+                <br>
+                <a href="photo2.html" target="_blank">More pictures</a>
+            </div>
+        </div>    
+        <p class="description">
+            These places are the best location to know well about Madagascar and his history
+        </p>
+        <p class="TextIntroduction">Number of population of Madagascar from 1960 to today:</p>
+        <div id="counterContainer">
+            <span id="counter">0</span>
+            
+                <script>
+                    
+                        let count = 12456873;
+                        const target = 32246250;
+                        const speed = 38; // Ajustez cette valeur pour la vitesse du compteur
+                    
+                        function updateCounter() {
+                            const counter = document.getElementById('counter');
+                            count += Math.floor(target / 1000); // Augmente le compteur par petites étapes
+                            if (count > target) count = target; // Ne dépasse pas le nombre cible
+                            counter.innerText = count.toLocaleString(); // Affiche avec séparateurs de milliers
+                            if (count < target) {
+                                setTimeout(updateCounter, speed);
+                            }
+                        }
+                    
+                        updateCounter();
+                
+                
+            </script>
+        </div>
+        <p>incomplete</p>
+        
+
+    </body>
+</html>

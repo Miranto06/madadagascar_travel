@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inscribe</title>
+        <style>
+            * {
+                font-family: 'Helvetica','sans-serif';
+            }
+        </style>
+        <link rel="stylesheet" href="styleSU.css">
+         
+    </head>
+    <body>
+        <h1>
+            <div id="question">
+                <b>
+                    Ready to know more about madagascar? Inscribe!
+                </b>
+            </div> 
+        </h1>
+        <div>
+        <form action="javascript:void(0);">
+            <h4><i>INSCRIPTION</i></h4>
+            <hr>
+            <div class="name-field">
+                <div>
+                    <label >Name</label>
+                    <input type="text" placeholder=" your name">
+                </div>
+                <div>
+                      <label >First name</label>
+                    <input type="text" placeholder=" your first name">
+                </div>
+            </div>
+            <label> Pseudo*(facultative)</label>
+            <input type="text" id="facultative" placeholder="Pseudo*">
+            <label >Adress mail</label>
+            <input type="email" placeholder="example@gmail.com">
+            <label >Password</label>
+            <input type="password" placeholder="password00*!" ">
+            <input type="submit" value="Inscribe" onclick="redirectToPage()" >
+                <script>
+                    function redirectToPage(){
+                        window.location.href = "signup.php";
+                    }
+                </script>
+                
+            <p>Have you already a count? Please <a href="signin.html" target="_blank">login </a></p>
+
+        </form>
+        </div>
+    </body>
